@@ -3,7 +3,7 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0-focal AS restore
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS restore
 WORKDIR /src
 COPY ["src/ApiGateway/ApiGateway.csproj", "src/ApiGateway/"]
 RUN dotnet restore "src/ApiGateway/ApiGateway.csproj"
